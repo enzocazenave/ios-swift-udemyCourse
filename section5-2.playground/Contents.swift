@@ -72,7 +72,6 @@ var i = numeros.count - 1
 repeat {
     numeros.remove(at: i)
     i -= 1
-    
 } while (numeros.count > 0)
 
 print("El array esta vacio, su cantidad de elementos es: \(numeros.count)")
@@ -85,5 +84,3 @@ repeat {
     numeroAleatorio = Int(arc4random_uniform(1000))
     print("El ciclo se ejecuto \(n) veces")
 } while (numeroAleatorio != 8)
-
-print(numeroAleatorio)
