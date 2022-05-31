@@ -46,8 +46,4 @@ myContent.contains(name)
 
 myContent.isEmpty
 
-// Recorrer letras de un string.
 
-for l in myContent {
-    print(l)
-}
