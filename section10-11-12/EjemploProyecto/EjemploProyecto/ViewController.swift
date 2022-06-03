@@ -108,6 +108,7 @@ class ViewController: UIViewController {
         myTextField.textColor = .brown
         myTextField.placeholder = "Escribe algo"
         myTextField.delegate = self
+        myTextField.isHidden = true
         
     }
     
@@ -128,6 +129,7 @@ class ViewController: UIViewController {
         mySegmentedControl.selectedSegmentIndex = myPageControl.currentPage
         mySlider.value = Float(myPageControl.currentPage) + 1
         myStepper.value = Double(myPageControl.currentPage) + 1
+        myStepperLabel.text = String(myPageControl.currentPage + 1)
     }
     
     
@@ -138,6 +140,7 @@ class ViewController: UIViewController {
         myPageControl.currentPage = mySegmentedControl.selectedSegmentIndex
         mySlider.value = Float(mySegmentedControl.selectedSegmentIndex) + 1
         myStepper.value = Double(mySegmentedControl.selectedSegmentIndex) + 1
+        myStepperLabel.text = String(mySegmentedControl.selectedSegmentIndex + 1)
     }
     
     @IBAction func mySliderAction(_ sender: Any) {
@@ -161,6 +164,8 @@ class ViewController: UIViewController {
             progress = 1.0
         }
         
+        myStepperLabel.text = String(mySegmentedControl.selectedSegmentIndex + 1)
+    
         myPickerView.selectRow(mySegmentedControl.selectedSegmentIndex, inComponent: 0, animated: true)
         let myString = myPickerViewValues[mySegmentedControl.selectedSegmentIndex]
         myButton.setTitle(myString, for: .normal)
@@ -178,6 +183,20 @@ class ViewController: UIViewController {
         myButton.setTitle(myPickerViewValues[Int(value)], for: .normal)
         myPageControl.currentPage = Int(value)
         myStepperLabel.text = String(Int(value + 1))
+        
+        let labelStep = Int(value)
+        
+        if labelStep == 0 {
+            myProgressView.progress = 0.2
+        } else if labelStep == 1 {
+            myProgressView.progress = 0.4
+        } else if labelStep == 2 {
+            myProgressView.progress = 0.6
+        } else if labelStep == 3 {
+            myProgressView.progress = 0.8
+        } else if labelStep == 4 {
+            myProgressView.progress = 1.0
+        }
     }
     
     @IBAction func mySwitchAction(_ sender: Any) {
@@ -193,6 +212,7 @@ class ViewController: UIViewController {
             myProgressView.isHidden = false
             myStepperLabel.isHidden = false
             mySwitchLabel.isHidden = true
+            myTextField.isHidden = false
         } else {
             myPickerView.isHidden = true
             myButton.isHidden = true
@@ -204,6 +224,7 @@ class ViewController: UIViewController {
             myProgressView.isHidden = true
             myStepperLabel.isHidden = true
             mySwitchLabel.isHidden = false
+            myTextField.isHidden = true
             mySwitchLabel.text = "Esta apagado"
         }
     }
@@ -229,6 +250,19 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         mySegmentedControl.selectedSegmentIndex = row
         mySlider.value = Float(row) + 1
         myStepper.value = Double(row) + 1
+        myStepperLabel.text = String(row + 1)
+        
+        if row == 0 {
+            myProgressView.progress = 0.2
+        } else if row == 1 {
+            myProgressView.progress = 0.4
+        } else if row == 2 {
+            myProgressView.progress = 0.6
+        } else if row == 3 {
+            myProgressView.progress = 0.8
+        } else if row == 4 {
+            myProgressView.progress = 1.0
+        }
     }
 }
 

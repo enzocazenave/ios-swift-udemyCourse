@@ -162,7 +162,7 @@
         <!--Item 2-->
         <scene sceneID="Qbb-Al-ERZ">
             <objects>
-                <viewController id="E9U-fu-HuX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vcPink" id="E9U-fu-HuX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1cx-qV-HYH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,23 +173,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUj-gj-06H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="2288"/>
+            <point key="canvasLocation" x="1025" y="2249"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="oPv-bu-As7">
             <objects>
-                <viewController id="rD4-Gi-GYI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vcGreen" id="rD4-Gi-GYI" customClass="GreenViewController" customModule="ViewsAndNavigationControls" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rmg-Gj-Ytf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAY-0J-6Wd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osC-XI-td7">
+                                <rect key="frame" x="162" y="437.5" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uCT-US-YdK"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="osC-XI-td7" firstAttribute="centerX" secondItem="Rmg-Gj-Ytf" secondAttribute="centerX" id="awl-7A-dQM"/>
+                            <constraint firstItem="osC-XI-td7" firstAttribute="centerY" secondItem="Rmg-Gj-Ytf" secondAttribute="centerY" id="tUn-cD-HBU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="2zJ-2b-hEv"/>
+                    <connections>
+                        <outlet property="myLabel" destination="osC-XI-td7" id="W2A-if-nVf"/>
+                        <outlet property="mySearchBar" destination="sAY-0J-6Wd" id="2FL-LG-QM7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lt9-3q-bh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="1596"/>
+            <point key="canvasLocation" x="1025" y="1558"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0kj-Mc-Fz6">
@@ -203,14 +224,23 @@
                         <color key="tintColor" systemColor="systemCyanColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rD4-Gi-GYI" kind="relationship" relationship="viewControllers" id="hdd-WS-Pe5"/>
-                        <segue destination="E9U-fu-HuX" kind="relationship" relationship="viewControllers" id="rig-hm-j37"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2qY-cg-1cF"/>
+                        <segue destination="s5g-hw-cIP" kind="relationship" relationship="viewControllers" id="ze1-Os-yFA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4w-vg-rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1123" y="1817"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="yrV-M6-O8c">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="s5g-hw-cIP" customClass="PageViewController" customModule="ViewsAndNavigationControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1Fx-m3-qh8"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61p-e2-dD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="1817"/>
         </scene>
     </scenes>
     <resources>
