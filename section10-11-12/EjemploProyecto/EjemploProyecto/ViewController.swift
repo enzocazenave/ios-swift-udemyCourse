@@ -130,6 +130,24 @@ class ViewController: UIViewController {
         mySlider.value = Float(myPageControl.currentPage) + 1
         myStepper.value = Double(myPageControl.currentPage) + 1
         myStepperLabel.text = String(myPageControl.currentPage + 1)
+        
+        let row = myPageControl.currentPage
+        var progress: Float = 0
+        
+        switch row {
+        case 0:
+            progress = 0.2
+        case 1:
+            progress = 0.4
+        case 2:
+            progress = 0.6
+        case 3:
+            progress = 0.8
+        default:
+            progress = 1.0
+        }
+        
+        myProgressView.progress = progress
     }
     
     
@@ -141,6 +159,24 @@ class ViewController: UIViewController {
         mySlider.value = Float(mySegmentedControl.selectedSegmentIndex) + 1
         myStepper.value = Double(mySegmentedControl.selectedSegmentIndex) + 1
         myStepperLabel.text = String(mySegmentedControl.selectedSegmentIndex + 1)
+        
+        let row = mySegmentedControl.selectedSegmentIndex
+        var progress: Float = 0
+        
+        switch row {
+        case 0:
+            progress = 0.2
+        case 1:
+            progress = 0.4
+        case 2:
+            progress = 0.6
+        case 3:
+            progress = 0.8
+        default:
+            progress = 1.0
+        }
+        
+        myProgressView.progress = progress
     }
     
     @IBAction func mySliderAction(_ sender: Any) {

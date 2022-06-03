@@ -23,7 +23,6 @@ class PageViewController: UIPageViewController {
         setViewControllers([myGreenVC], direction: .forward, animated: true, completion: nil)
         
         dataSource = self
-        print("Charged")
     }
 }
 
@@ -31,7 +30,7 @@ extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         let index = myControllers.firstIndex(of: viewController)
-        print("before")
+
         if index == 0 {
             return myControllers.last
         }
@@ -43,7 +42,7 @@ extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         let index = myControllers.firstIndex(of: viewController)
-        print("after")
+
         if index == 0 {
             return myControllers.last
         }
