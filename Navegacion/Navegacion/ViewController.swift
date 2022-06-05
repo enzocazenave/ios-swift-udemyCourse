@@ -15,5 +15,17 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func botonNegro(_ sender: Any) {
+        performSegue(withIdentifier: "VCNegro", sender: self)
+    }
+    
+    @IBAction func botonRosa(_ sender: Any) {
+        performSegue(withIdentifier: "VCRosa", sender: self)
+    }
+    
+    @IBAction func botonAzul(_ sender: Any) {
+        performSegue(withIdentifier: "VCAzul", sender: self)
+    }
+
 }
 

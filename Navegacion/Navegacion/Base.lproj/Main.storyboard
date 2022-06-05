@@ -44,7 +44,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="TW0-by-qTr" kind="show" id="Ym9-l7-Pnu"/>
+                                    <action selector="botonNegro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OQ8-5m-2Vu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-Uw-4yR">
@@ -56,7 +56,7 @@
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="QpX-bU-BBo" kind="show" id="aaz-lN-6SR"/>
+                                    <action selector="botonRosa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hhz-Zm-5Zo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrS-ad-z4B">
@@ -68,7 +68,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="LJP-iI-Oc9" kind="show" id="j6n-OW-Ez7"/>
+                                    <action selector="botonAzul:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1z-4m-og6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,6 +76,9 @@
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Aqua" id="uB4-Bc-TFs"/>
+                    <connections>
+                        <segue destination="TW0-by-qTr" kind="show" identifier="VCNegro" id="UxA-cA-EHP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +87,7 @@
         <!--Negro-->
         <scene sceneID="v2U-y3-qrQ">
             <objects>
-                <viewController id="TW0-by-qTr" sceneMemberID="viewController">
+                <viewController id="TW0-by-qTr" customClass="ViewControllerBC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tz6-Fr-6cJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,39 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkY-fV-eAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="-543"/>
-        </scene>
-        <!--Rosa-->
-        <scene sceneID="gWN-h2-8vn">
-            <objects>
-                <viewController id="QpX-bU-BBo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zfF-zo-wx7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7lK-Cl-gdp"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Rosa" id="Idq-Wx-zP2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rk1-EJ-d8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1692.753623188406" y="114.50892857142857"/>
-        </scene>
-        <!--Azul-->
-        <scene sceneID="3ve-4A-5cH">
-            <objects>
-                <viewController id="LJP-iI-Oc9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pEe-f0-Fld">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="A3M-OC-FhR"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Azul" id="tkG-SW-D4z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sL9-8y-AUV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1693" y="779"/>
+            <point key="canvasLocation" x="1725" y="115"/>
         </scene>
     </scenes>
     <resources>
